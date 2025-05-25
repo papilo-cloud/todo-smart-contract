@@ -1,4 +1,8 @@
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import CreateTodoForm from './CreateTodoForm'
+import UpdateTodoForm from './UpdateTodoForm'
+import DeleteTodoForm from './DeleteTodoForm'
+
 
 function App() {
   const account = useAccount()
@@ -38,6 +42,15 @@ function App() {
         ))}
         <div>{status}</div>
         <div>{error?.message}</div>
+        <div className='card'>
+          <CreateTodoForm />
+        </div>
+        <div className="card">
+          <UpdateTodoForm />
+        </div>
+        <div className="card">
+          <DeleteTodoForm />
+        </div>
       </div>
     </>
   )
